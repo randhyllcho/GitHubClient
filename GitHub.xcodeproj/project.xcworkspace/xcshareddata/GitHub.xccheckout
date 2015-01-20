@@ -12,20 +12,24 @@
 	<dict>
 		<key>376E040639C55469E25B8B642155982C569C5184</key>
 		<string>https://github.com/randhyllcho/class-person-thing.git</string>
+		<key>4DB718B1FBE2937141E59FF637D3D7B24DE4FDD6</key>
+		<string>https://github.com/randhyllcho/GitHubClient.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GitHub/GitHub.xcodeproj</string>
+	<string>GitHub.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>376E040639C55469E25B8B642155982C569C5184</key>
 		<string>../../..</string>
+		<key>4DB718B1FBE2937141E59FF637D3D7B24DE4FDD6</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/randhyllcho/class-person-thing.git</string>
+	<string>https://github.com/randhyllcho/GitHubClient.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>376E040639C55469E25B8B642155982C569C5184</string>
+	<string>4DB718B1FBE2937141E59FF637D3D7B24DE4FDD6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>376E040639C55469E25B8B642155982C569C5184</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ios</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4DB718B1FBE2937141E59FF637D3D7B24DE4FDD6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GitHub</string>
 		</dict>
 	</array>
 </dict>

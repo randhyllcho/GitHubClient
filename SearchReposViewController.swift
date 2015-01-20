@@ -34,6 +34,7 @@ class SearchReposViewController: UIViewController, UITableViewDataSource, UISear
     let cell = tableView.dequeueReusableCellWithIdentifier("SEARCH_CELL", forIndexPath: indexPath) as UITableViewCell
     cell.textLabel?.text = repositories[indexPath.row].name
     cell.detailTextLabel?.text = repositories[indexPath.row].author
+    //cell.imageView?.image = repositories[indexPath.row].image
     
     return cell
   }
