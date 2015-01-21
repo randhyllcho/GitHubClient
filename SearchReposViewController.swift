@@ -44,10 +44,10 @@ class SearchReposViewController: UIViewController, UITableViewDataSource, UISear
   }
   
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-    println(userSearch)
+    //println(userSearch)
     self.GitHubService.fetchRepositoriesForSearchTerm(searchBar.text, callBack: { (theRepositories, errorDescription) -> (Void) in
       if errorDescription == nil {
-        println(theRepositories)
+        //println(theRepositories)
         self.repositories = theRepositories!
         self.tableView.reloadData()
       }

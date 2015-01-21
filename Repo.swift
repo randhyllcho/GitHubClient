@@ -11,15 +11,15 @@ import Foundation
 struct Repository {
   let name : String
   let author : String
-  let image : String
-  var newImage : UIImage?
+  //let image : String
+  //var newImage : UIImage?
   
   init(jsonDictionary : [String : AnyObject]) {
     //let itemsDictionary = jsonDictionary["items"] as [[String : AnyObject]]
     self.name = jsonDictionary["name"] as String
     let ownerDictionary = jsonDictionary["owner"] as [String : AnyObject]
     self.author = ownerDictionary["login"] as String
-    self.image = ownerDictionary["avatar_url"] as String
+    //self.image = ownerDictionary["avatar_url"] as String
   }
   
 }
