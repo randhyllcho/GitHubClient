@@ -20,6 +20,7 @@ class SearchUserViewController: UIViewController, UICollectionViewDataSource, UI
       self.collectionView.dataSource = self
       self.searchBar.delegate = self
       self.navigationController?.delegate = self
+      self.collectionView.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }
   

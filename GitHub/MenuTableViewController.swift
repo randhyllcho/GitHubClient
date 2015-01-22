@@ -29,6 +29,11 @@ class MenuTableViewController: UITableViewController {
       GitHubServiceController.sharedGitHubController.requestAccessToken()
     }
   }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.delegate = nil
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
