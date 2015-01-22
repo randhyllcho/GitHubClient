@@ -16,6 +16,11 @@
 		3283DDDD1A6DA7A900CDAD6C /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */; };
 		3283DDDF1A6DA7E400CDAD6C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDDE1A6DA7E400CDAD6C /* Repo.swift */; };
 		3283DDE31A6DA92300CDAD6C /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */; };
+		32BCC5E71A704E2F004E33E6 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */; };
+		32BCC5E91A705153004E33E6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5E81A705153004E33E6 /* UserCell.swift */; };
+		32BCC5EB1A70515F004E33E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5EA1A70515F004E33E6 /* User.swift */; };
+		32BCC5F01A70520A004E33E6 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5EF1A70520A004E33E6 /* UserDetailViewController.swift */; };
+		32BCC5F41A70607B004E33E6 /* ToUserDetailAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5F31A70607B004E33E6 /* ToUserDetailAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,11 @@
 		3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = SOURCE_ROOT; };
 		3283DDDE1A6DA7E400CDAD6C /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
 		3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
+		32BCC5E81A705153004E33E6 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		32BCC5EA1A70515F004E33E6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32BCC5EF1A70520A004E33E6 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		32BCC5F31A70607B004E33E6 /* ToUserDetailAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToUserDetailAnimationController.swift; path = ../ToUserDetailAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +93,13 @@
 		3283DDB71A6DA53900CDAD6C /* GitHub */ = {
 			isa = PBXGroup;
 			children = (
-				3283DDBA1A6DA53900CDAD6C /* AppDelegate.swift */,
-				3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */,
-				3283DDDA1A6DA78F00CDAD6C /* SearchReposViewController.swift */,
-				3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */,
-				3283DDBE1A6DA53900CDAD6C /* Main.storyboard */,
+				32BCC5EE1A705185004E33E6 /* Controller */,
+				32BCC5ED1A70517E004E33E6 /* View */,
+				32BCC5EC1A705176004E33E6 /* Model */,
+				32BCC5EA1A70515F004E33E6 /* User.swift */,
 				3283DDDE1A6DA7E400CDAD6C /* Repo.swift */,
+				3283DDBA1A6DA53900CDAD6C /* AppDelegate.swift */,
 				3283DDC11A6DA53900CDAD6C /* Images.xcassets */,
-				3283DDC31A6DA53900CDAD6C /* LaunchScreen.xib */,
 				3283DDB81A6DA53900CDAD6C /* Supporting Files */,
 			);
 			path = GitHub;
@@ -119,6 +128,36 @@
 				3283DDCF1A6DA53900CDAD6C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32BCC5EC1A705176004E33E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		32BCC5ED1A70517E004E33E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32BCC5E81A705153004E33E6 /* UserCell.swift */,
+				3283DDBE1A6DA53900CDAD6C /* Main.storyboard */,
+				3283DDC31A6DA53900CDAD6C /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		32BCC5EE1A705185004E33E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3283DDDA1A6DA78F00CDAD6C /* SearchReposViewController.swift */,
+				32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */,
+				32BCC5EF1A70520A004E33E6 /* UserDetailViewController.swift */,
+				3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */,
+				32BCC5F31A70607B004E33E6 /* ToUserDetailAnimationController.swift */,
+				3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,10 +261,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3283DDDB1A6DA78F00CDAD6C /* SearchReposViewController.swift in Sources */,
+				32BCC5E71A704E2F004E33E6 /* SearchUserViewController.swift in Sources */,
+				32BCC5F01A70520A004E33E6 /* UserDetailViewController.swift in Sources */,
 				3283DDDF1A6DA7E400CDAD6C /* Repo.swift in Sources */,
 				3283DDE31A6DA92300CDAD6C /* MenuTableViewController.swift in Sources */,
+				32BCC5EB1A70515F004E33E6 /* User.swift in Sources */,
 				3283DDDD1A6DA7A900CDAD6C /* GitHubService.swift in Sources */,
 				3283DDBB1A6DA53900CDAD6C /* AppDelegate.swift in Sources */,
+				32BCC5E91A705153004E33E6 /* UserCell.swift in Sources */,
+				32BCC5F41A70607B004E33E6 /* ToUserDetailAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +463,7 @@
 				3283DDD61A6DA53900CDAD6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3283DDD71A6DA53900CDAD6C /* Build configuration list for PBXNativeTarget "GitHubTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +472,7 @@
 				3283DDD91A6DA53900CDAD6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
