@@ -150,10 +150,10 @@
 		32BCC5EE1A705185004E33E6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */,
 				3283DDDA1A6DA78F00CDAD6C /* SearchReposViewController.swift */,
 				32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */,
 				32BCC5EF1A70520A004E33E6 /* UserDetailViewController.swift */,
-				3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */,
 				32BCC5F31A70607B004E33E6 /* ToUserDetailAnimationController.swift */,
 				3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */,
 			);

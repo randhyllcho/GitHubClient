@@ -23,7 +23,7 @@ class ToUserDetailAnimationController : NSObject, UIViewControllerAnimatedTransi
     
     let selectedIndexPath = fromVC.collectionView.indexPathsForSelectedItems().first as NSIndexPath
     let cell = fromVC.collectionView.cellForItemAtIndexPath(selectedIndexPath) as UserCell
-    let snapShotOfCell = cell.imageView.snapshotViewAfterScreenUpdates(false)
+    var snapShotOfCell = cell.imageView.snapshotViewAfterScreenUpdates(false)
     cell.imageView.hidden = true
     snapShotOfCell.frame = containerView.convertRect(cell.imageView.frame, fromView: cell.imageView.superview)
     
@@ -39,9 +39,18 @@ class ToUserDetailAnimationController : NSObject, UIViewControllerAnimatedTransi
     
     let duration = self.transitionDuration(transitionContext)
     
+    UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.25, initialSpringVelocity: 10, options: nil, animations: { () -> Void in
+      
+      toVC.userImageView.layer.masksToBounds = true
+      toVC.userImageView.layer.cornerRadius = 75
+      snapShotOfCell.layer.masksToBounds = true
+      snapShotOfCell.layer.cornerRadius = 200
+    }) { (finished) -> Void in
+      
+    }
+    
     UIView.animateWithDuration(duration, animations: { () -> Void in
       toVC.view.alpha = 1.0
-      
       let frame = containerView.convertRect(toVC.userImageView.frame, fromView: toVC.view)
       snapShotOfCell.frame = frame
       

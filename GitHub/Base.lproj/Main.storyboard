@@ -263,21 +263,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="35u-Xq-4ee">
-                                <rect key="frame" x="225" y="28" width="150" height="150"/>
+                                <rect key="frame" x="225" y="72" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="oAy-ZJ-2jn"/>
                                     <constraint firstAttribute="height" constant="150" id="p2w-4T-uIT"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFq-q4-y4h">
+                                <rect key="frame" x="270.5" y="230" width="60.5" height="29"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DHU-7c-bCc">
+                                <rect key="frame" x="0.0" y="267" width="600" height="333"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="USER_REPO_CELL" id="qd5-YD-Lja">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qd5-YD-Lja" id="dcO-ji-9bl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tFq-q4-y4h" firstAttribute="top" secondItem="35u-Xq-4ee" secondAttribute="bottom" constant="8" id="3Mq-hk-Ou2"/>
                             <constraint firstItem="35u-Xq-4ee" firstAttribute="top" secondItem="rnb-K3-tpe" secondAttribute="bottom" constant="8" id="9mi-Lk-JcJ"/>
                             <constraint firstAttribute="centerX" secondItem="35u-Xq-4ee" secondAttribute="centerX" id="CrY-YO-DzX"/>
+                            <constraint firstItem="DHU-7c-bCc" firstAttribute="top" secondItem="tFq-q4-y4h" secondAttribute="bottom" constant="8" id="FLI-fh-eGa"/>
+                            <constraint firstItem="o8o-P0-pA6" firstAttribute="top" secondItem="DHU-7c-bCc" secondAttribute="bottom" id="jeF-Ck-iNK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DHU-7c-bCc" secondAttribute="trailing" constant="-16" id="rP3-Rc-2zh"/>
+                            <constraint firstItem="DHU-7c-bCc" firstAttribute="leading" secondItem="2fJ-qY-DeU" secondAttribute="leadingMargin" constant="-16" id="zaw-ot-fcS"/>
+                            <constraint firstAttribute="centerX" secondItem="tFq-q4-y4h" secondAttribute="centerX" id="zyt-GY-DR5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableVIew" destination="DHU-7c-bCc" id="pmX-Rw-tuE"/>
                         <outlet property="userImageView" destination="35u-Xq-4ee" id="TE8-2K-Txg"/>
+                        <outlet property="userNameLabel" destination="tFq-q4-y4h" id="sDc-0Y-pXo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRu-9D-i2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
