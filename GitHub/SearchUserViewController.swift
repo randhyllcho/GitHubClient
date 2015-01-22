@@ -67,8 +67,10 @@ class SearchUserViewController: UIViewController, UICollectionViewDataSource, UI
       let destinationVC = segue.destinationViewController as UserDetailViewController
       let selectedIndexPath = self.collectionView.indexPathsForSelectedItems().first  as NSIndexPath
       destinationVC.selectedUser = self.users[selectedIndexPath.row]
-      
     }
+  }
+  func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    return text.Validate()
   }
 
 }

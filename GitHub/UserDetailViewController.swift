@@ -12,6 +12,7 @@ import UIKit
 class UserDetailViewController: UIViewController, UITableViewDataSource {
 
   var selectedUser : User!
+  var repo = [Repository]()
   
   @IBOutlet weak var userNameLabel: UILabel!
   
@@ -19,7 +20,7 @@ class UserDetailViewController: UIViewController, UITableViewDataSource {
   
   @IBOutlet weak var userImageView: UIImageView!
   
-  var repo = [Repository]()
+  
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,13 @@ class UserDetailViewController: UIViewController, UITableViewDataSource {
 //      self.userImageView.layer.masksToBounds = true
 //      self.userImageView.layer.cornerRadius = 75
       self.userNameLabel.text = selectedUser.name
-      
         // Do any additional setup after loading the view.
     }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("USER_REPO_CELL", forIndexPath: indexPath) as UITableViewCell
+    cell.textLabel?.text = repo[indexPath.row].name
+    //cell.detailTextLabel?.text = selectedRepo.id
     return cell
   }
   

@@ -11,7 +11,6 @@ import UIKit
 class SearchReposViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
 
   @IBOutlet weak var tableView: UITableView!
-
   
   @IBOutlet weak var searchBar: UISearchBar!
   
@@ -34,7 +33,6 @@ class SearchReposViewController: UIViewController, UITableViewDataSource, UISear
     let cell = tableView.dequeueReusableCellWithIdentifier("SEARCH_CELL", forIndexPath: indexPath) as UITableViewCell
     cell.textLabel?.text = repositories[indexPath.row].name
     cell.detailTextLabel?.text = repositories[indexPath.row].author
-    //cell.imageView?.image = repositories[indexPath.row].image
     
     return cell
   }
@@ -44,16 +42,25 @@ class SearchReposViewController: UIViewController, UITableViewDataSource, UISear
   }
   
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-    //println(userSearch)
+    println(userSearch)
     self.GitHubService.fetchRepositoriesForSearchTerm(searchBar.text, callBack: { (theRepositories, errorDescription) -> (Void) in
       if errorDescription == nil {
-        //println(theRepositories)
+        println(theRepositories)
         self.repositories = theRepositories!
         self.tableView.reloadData()
       }
     })
 
     searchBar.resignFirstResponder()
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "WEB_VIEW" {
+      let destinationVC = segue.destinationViewController as WebViewController
+      let selectedIndexPath = self.tableView.indexPathForSelectedRow()
+      let repo = self.repositories[selectedIndexPath!.row]
+      destinationVC.url = repo.url
+    }
   }
 
     /*

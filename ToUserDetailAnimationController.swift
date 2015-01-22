@@ -39,10 +39,10 @@ class ToUserDetailAnimationController : NSObject, UIViewControllerAnimatedTransi
     
     let duration = self.transitionDuration(transitionContext)
     
-    UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.25, initialSpringVelocity: 10, options: nil, animations: { () -> Void in
-      
+    UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 100, options: nil, animations: { () -> Void in
       toVC.userImageView.layer.masksToBounds = true
       toVC.userImageView.layer.cornerRadius = 75
+      toVC.userImageView.layer.borderWidth = 2
       snapShotOfCell.layer.masksToBounds = true
       snapShotOfCell.layer.cornerRadius = 200
     }) { (finished) -> Void in

@@ -72,6 +72,10 @@ class GitHubServiceController {
   
   func fetchRepositoriesForSearchTerm(searchTerm : String, callBack : ([Repository]?, String?) -> (Void)) {
     let url = NSURL(string: "https://api.github.com/search/repositories?q=\(searchTerm)")
+    
+    let request = NSMutableURLRequest(URL: url!)
+    request.setValue("token \(self.accessToken!)", forHTTPHeaderField: "Authorization")
+    
     let dataTask = self.URLSession.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
       if error == nil {
         if let httpResponse = response as? NSHTTPURLResponse {
@@ -80,16 +84,16 @@ class GitHubServiceController {
           case 200...299:
             println("Working")
             if let jsonDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [String : AnyObject] {
-              NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                let items = jsonDictionary["items"] as [[String : AnyObject]]
-                var theRepositries = [Repository]()
-                for repository in items {
-                  let currentRepository = Repository(jsonDictionary: repository)
-                  theRepositries.append(currentRepository)
-                }
-                callBack(theRepositries, nil)
-              })
+              let items = jsonDictionary["items"] as [[String : AnyObject]]
+              var theRepositries = [Repository]()
+              for repository in items {
+                let currentRepository = Repository(jsonDictionary: repository)
+                theRepositries.append(currentRepository)
             }
+              NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                callBack(theRepositries,nil)
+              })
+          }
           case 400...599:
             println("No Good")
             

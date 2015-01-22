@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324822E71A71AFE100C036D8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324822E61A71AFE100C036D8 /* WebViewController.swift */; };
 		3283DDBB1A6DA53900CDAD6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDBA1A6DA53900CDAD6C /* AppDelegate.swift */; };
 		3283DDC01A6DA53900CDAD6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3283DDBE1A6DA53900CDAD6C /* Main.storyboard */; };
 		3283DDC21A6DA53900CDAD6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3283DDC11A6DA53900CDAD6C /* Images.xcassets */; };
@@ -16,6 +17,7 @@
 		3283DDDD1A6DA7A900CDAD6C /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */; };
 		3283DDDF1A6DA7E400CDAD6C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDDE1A6DA7E400CDAD6C /* Repo.swift */; };
 		3283DDE31A6DA92300CDAD6C /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */; };
+		328D77311A71B7FD00063D6C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328D77301A71B7FD00063D6C /* Extension.swift */; };
 		32BCC5E71A704E2F004E33E6 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */; };
 		32BCC5E91A705153004E33E6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5E81A705153004E33E6 /* UserCell.swift */; };
 		32BCC5EB1A70515F004E33E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5EA1A70515F004E33E6 /* User.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		324822E61A71AFE100C036D8 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3283DDB51A6DA53900CDAD6C /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3283DDB91A6DA53900CDAD6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3283DDBA1A6DA53900CDAD6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = SOURCE_ROOT; };
 		3283DDDE1A6DA7E400CDAD6C /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
 		3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		328D77301A71B7FD00063D6C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
 		32BCC5E81A705153004E33E6 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		32BCC5EA1A70515F004E33E6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				32BCC5EA1A70515F004E33E6 /* User.swift */,
 				3283DDDE1A6DA7E400CDAD6C /* Repo.swift */,
 				3283DDBA1A6DA53900CDAD6C /* AppDelegate.swift */,
+				328D77301A71B7FD00063D6C /* Extension.swift */,
 				3283DDC11A6DA53900CDAD6C /* Images.xcassets */,
 				3283DDB81A6DA53900CDAD6C /* Supporting Files */,
 			);
@@ -155,6 +160,7 @@
 				32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */,
 				32BCC5EF1A70520A004E33E6 /* UserDetailViewController.swift */,
 				32BCC5F31A70607B004E33E6 /* ToUserDetailAnimationController.swift */,
+				324822E61A71AFE100C036D8 /* WebViewController.swift */,
 				3283DDDC1A6DA7A900CDAD6C /* GitHubService.swift */,
 			);
 			name = Controller;
@@ -261,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3283DDDB1A6DA78F00CDAD6C /* SearchReposViewController.swift in Sources */,
+				324822E71A71AFE100C036D8 /* WebViewController.swift in Sources */,
 				32BCC5E71A704E2F004E33E6 /* SearchUserViewController.swift in Sources */,
+				328D77311A71B7FD00063D6C /* Extension.swift in Sources */,
 				32BCC5F01A70520A004E33E6 /* UserDetailViewController.swift in Sources */,
 				3283DDDF1A6DA7E400CDAD6C /* Repo.swift in Sources */,
 				3283DDE31A6DA92300CDAD6C /* MenuTableViewController.swift in Sources */,
