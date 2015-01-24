@@ -9,12 +9,14 @@
 import UIKit
 
 struct User {
-  let name : String
+  let names : String
   let avatarURL : String
   var avatarImage : UIImage?
+  var url : String
   
   init (jsonDictionary : [String : AnyObject]) {
-    self.name = jsonDictionary["login"] as String
+    self.names = jsonDictionary["login"] as String
     self.avatarURL = jsonDictionary["avatar_url"] as String
+    self.url = jsonDictionary["html_url"] as String
   }
 }

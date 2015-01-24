@@ -26,7 +26,7 @@ class SearchReposViewController: UIViewController, UITableViewDataSource, UISear
       self.tableView.dataSource = self
       self.searchBar.delegate = self
       
-              // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
     }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -106,6 +106,40 @@ class GitHubServiceController {
     dataTask.resume()
   }
   
+  func fetchUserRepos(userName : String, callBack : ([Repository]?, String?) -> (Void)) {
+    let url = NSURL(string: "https://api.github.com/users/\(userName)/repos")
+    let request = NSMutableURLRequest(URL: url!)
+    request.setValue("token \(self.accessToken!)", forHTTPHeaderField: "Authorization")
+    
+    let dataTask = self.URLSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+      if error == nil {
+        if let httpResponse = response as? NSHTTPURLResponse {
+          println(httpResponse.statusCode)
+          switch httpResponse.statusCode {
+          case 200...299:
+            println("Got User Repo")
+            if let jsonDicionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [AnyObject] {
+              
+              var repo = [Repository]()
+              for item in jsonDicionary {
+                if let jsonArray = item as? [String : AnyObject] {
+                  let repos = Repository(jsonDictionary : jsonArray)
+                  repo.append(repos)
+                }
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                  callBack(repo,nil)
+                })
+              }
+            }
+          default:
+            println("idiot")
+          }
+        }
+      }
+    })
+    dataTask.resume()
+  }
+  
   func fetchUserForSearchTerm(searchTerm : String, callBack : ([User]?, String?) -> (Void)) {
     let url = NSURL(string: "https://api.github.com/search/users?q=\(searchTerm)")
     let request = NSMutableURLRequest(URL: url!)

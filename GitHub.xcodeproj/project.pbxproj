@@ -18,6 +18,7 @@
 		3283DDDF1A6DA7E400CDAD6C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDDE1A6DA7E400CDAD6C /* Repo.swift */; };
 		3283DDE31A6DA92300CDAD6C /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */; };
 		328D77311A71B7FD00063D6C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328D77301A71B7FD00063D6C /* Extension.swift */; };
+		328D77331A731A3500063D6C /* flowerPhoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 328D77321A731A3500063D6C /* flowerPhoto.jpg */; };
 		32BCC5E71A704E2F004E33E6 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */; };
 		32BCC5E91A705153004E33E6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5E81A705153004E33E6 /* UserCell.swift */; };
 		32BCC5EB1A70515F004E33E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCC5EA1A70515F004E33E6 /* User.swift */; };
@@ -51,6 +52,7 @@
 		3283DDDE1A6DA7E400CDAD6C /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
 		3283DDE21A6DA92300CDAD6C /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		328D77301A71B7FD00063D6C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		328D77321A731A3500063D6C /* flowerPhoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flowerPhoto.jpg; sourceTree = "<group>"; };
 		32BCC5E61A704E2F004E33E6 /* SearchUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
 		32BCC5E81A705153004E33E6 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		32BCC5EA1A70515F004E33E6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				32BCC5EC1A705176004E33E6 /* Model */,
 				32BCC5EA1A70515F004E33E6 /* User.swift */,
 				3283DDDE1A6DA7E400CDAD6C /* Repo.swift */,
+				328D77321A731A3500063D6C /* flowerPhoto.jpg */,
 				3283DDBA1A6DA53900CDAD6C /* AppDelegate.swift */,
 				328D77301A71B7FD00063D6C /* Extension.swift */,
 				3283DDC11A6DA53900CDAD6C /* Images.xcassets */,
@@ -249,6 +252,7 @@
 				3283DDC01A6DA53900CDAD6C /* Main.storyboard in Resources */,
 				3283DDC51A6DA53900CDAD6C /* LaunchScreen.xib in Resources */,
 				3283DDC21A6DA53900CDAD6C /* Images.xcassets in Resources */,
+				328D77331A731A3500063D6C /* flowerPhoto.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
