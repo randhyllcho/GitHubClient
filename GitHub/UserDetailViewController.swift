@@ -20,7 +20,7 @@ class UserDetailViewController: UIViewController, UITableViewDataSource {
   
   @IBOutlet weak var userImageView: UIImageView!
   
-  var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+  var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight)) as UIVisualEffectView
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +63,11 @@ class UserDetailViewController: UIViewController, UITableViewDataSource {
     self.view.insertSubview(self.visualEffectView, aboveSubview: imageView)
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.delegate = nil
+  }
+  
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("USER_REPO_CELL", forIndexPath: indexPath) as UITableViewCell
     var selectedUser = self.repo[indexPath.row]
@@ -77,6 +82,14 @@ class UserDetailViewController: UIViewController, UITableViewDataSource {
     return self.repo.count
   }
   
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "USER_WEB" {
+      let destinationVC = segue.destinationViewController as WebViewController
+      let selectedIndexPath = self.tableVIew.indexPathForSelectedRow()
+      let repos = self.repo[selectedIndexPath!.row]
+      destinationVC.url = repos.url
+    }
+  }
   
   
   
